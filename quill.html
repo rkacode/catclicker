@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="css/quill.base.css" rel="stylesheet">
+    <link href="css/quill.snow.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/quill.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            var basicEditor = new Quill('#basic');
+
+            basicEditor.addModule('toolbar', {
+              container: '#basic-toolbar'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="basic">
+
+    </div>
+</body>
+</html>

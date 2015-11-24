@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/require-setup.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+    <script type="text/javascript" src="js/comp.js"></script>
+
+    <title></title>
+</head>
+<body>
+
+<a data-bind="click: showTicketModal" href="#">New ticket</a>
+
+<widget params="value: userRating"></widget>
+
+<!-- Ticket modal -->
+<div class="modal fade" data-keyboard="false" data-backdrop="static" tabindex="-1"
+     role="dialog" aria-labelledby="myModalLabel" data-bind="bootstrapShowModal: ticketModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-bind="click: hideTicketModal"
+                        aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add ticket</h4>
+            </div>
+            <div class="modal-body" style="padding: 20px">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="street"> Ticket  </label>
+                        <input type="text" class="form-control" data-bind="textInput: ticketName" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-bind="click: hideTicketModal">Close</button>
+                <button type="button" class="btn btn-primary" data-bind="click: saveTicket">Save ticket</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
